@@ -24,15 +24,13 @@ def Convert(deg, output_type):
             return deg_num
 
 
-continuing = True
-
-while continuing == True:
+while True:
     input_temp = input("Hello User, Please input your tempurature, followed by the letter of the tempurature you are using, for example 32 degrees celcius would be 32C, fahrenheit would be 32F, and kelvin would be 32K. ")
     convert_type = input("Which type of tempurature would you like to convert to? Fahrenheit, Celcius, or Kelvin? ")
     result = Convert(input_temp, convert_type)
     print(f"{input_temp} is {result} degrees in {convert_type}")
     keep_going = input("Would you like to convert another value(yes/no) ")
-    if keep_going.lower == "no":
+    if keep_going.lower() == "no":
         break
 
 print("Goodbye")
